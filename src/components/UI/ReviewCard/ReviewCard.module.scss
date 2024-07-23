@@ -1,0 +1,40 @@
+@import "../../../variables.scss";
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "img name" "img location" "text text";
+  grid-template-columns: 44px auto;
+  column-gap: 16px;
+}
+
+.img {
+  grid-area: img;
+  width: 44px;
+  border-radius: 100%;
+}
+
+.name {
+  grid-area: name;
+  margin-bottom: 4px;
+}
+
+.location {
+  grid-area: location;
+  font-size: 12px;
+  line-height: 133%;
+  color: $secondary-color;
+  margin-bottom: 20px;
+}
+
+.text {
+  grid-area: text;
+  font-size: 14px;
+  line-height: 171%;
+  color: #191c1f;
+}

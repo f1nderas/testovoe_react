@@ -1,0 +1,25 @@
+.button {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  border-radius: 4px;
+  padding: 20px 40px;
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+.primary {
+  color: white;
+  background-color: #2a6cea;
+  &:hover {
+    background-color: #397dff;
+  }
+}
+.secondary {
+  color: #191c1f;
+  background-color: #eceff2;
+  &:hover {
+    background-color: white;
+  }
+}

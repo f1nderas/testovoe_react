@@ -1,0 +1,25 @@
+@import "../../../variables.scss";
+
+.card {
+  @media (max-width: 991px) {
+    display: grid;
+    grid-template-areas: "img title" "img text";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 16px;
+  }
+}
+.img {
+  margin-bottom: 16px;
+  grid-area: img;
+}
+.title {
+  margin-bottom: 4px;
+  grid-area: title;
+}
+.text {
+  font-size: 14px;
+  line-height: 171%;
+  color: $secondary-color;
+  grid-area: text;
+}

@@ -1,0 +1,69 @@
+@import "../../../variables.scss";
+.wrapper {
+  position: relative;
+}
+
+.is-invalid {
+  .input {
+    border-color: red;
+  }
+  .icon {
+    svg {
+      fill: red;
+      stroke: white;
+    }
+  }
+}
+.is-valid {
+  .icon {
+    svg {
+      fill: green;
+      stroke: white;
+    }
+  }
+}
+
+.input {
+  background: white;
+  border: 2px solid #f6f8fa;
+  border-radius: 4px;
+  padding: 16px 16px 0;
+  color: $secondary-color;
+  outline: none;
+  height: 64px;
+  width: 100%;
+  &.is-empty {
+    background: #f6f8fa;
+    & + .label {
+      transform: scale(1) translateY(0);
+    }
+  }
+  &:focus {
+    border-color: #c2c8cd;
+    & + .label {
+      transform: scale(0.9) translate(-18px, -16px);
+    }
+  }
+}
+
+.label {
+  color: $secondary-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 16px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.9) translate(-18px, -16px);
+  line-height: 64px;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}

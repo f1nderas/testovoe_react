@@ -1,0 +1,149 @@
+$color-white: #eceff2;
+
+.header {
+  color: $color-white;
+  position: relative;
+  z-index: 10;
+  &-inner {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+  &-img {
+    display: flex;
+    div {
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+    }
+    &__1 {
+      background-color: #2a6cea;
+      z-index: 1;
+    }
+    &__2 {
+      background-color: $color-white;
+      margin-left: -11px;
+    }
+  }
+  @media (max-width: 991px) {
+    gap: 50px;
+  }
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+}
+
+.list {
+  display: flex;
+  height: 100%;
+  gap: 2rem;
+  transition: all 0.3s;
+  li {
+    height: 100%;
+  }
+  a {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  svg {
+    display: none;
+  }
+  @media (max-width: 991px) {
+    gap: 16px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    flex-direction: column;
+    transform: translate(-50%, -400%);
+    width: 100%;
+    li {
+      display: flex;
+      height: fit-content;
+    }
+    a {
+      font-size: 18px;
+      line-height: 178%;
+      color: #83898f;
+      border-bottom: 1px solid;
+      border-color: rgba(0, 0, 0, 0.2);
+      &:hover {
+        text-decoration: none;
+        border-color: black;
+      }
+    }
+    svg {
+      display: block;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  span {
+    height: 2px;
+    background: #333;
+    margin: 4px 0;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 991px) {
+    display: flex;
+  }
+}
+
+.nav {
+  @media (max-width: 991px) {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: white;
+    transition: 0.5s;
+  }
+}
+.open {
+  .logo__text {
+    color: black;
+  }
+  .list {
+    transform: translate(-50%, 0);
+  }
+  .hamburger span {
+    &:nth-child(1) {
+      transform: translateY(5px) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      transform: translateY(-5px) rotate(-45deg);
+    }
+  }
+  .nav {
+    transform: translateY(100vh);
+  }
+}
