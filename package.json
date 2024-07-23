@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "private": true,
+  "homepage": "https://f1nderas.github.io/testovoe_react",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

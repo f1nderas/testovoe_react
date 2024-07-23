@@ -7,9 +7,6 @@
   display: none;
 }
 
-.slick-prev {
-}
-
 .slick-next {
   transform: rotate(180deg);
 }
@@ -18,14 +15,14 @@
   display: block;
   width: 32px;
   height: 32px;
-  background-image: url(arrow.svg);
+  background-image: url(/arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.2s all;
   &:hover {
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(arrow_active.svg);
+    background-image: url(/arrow_active.svg);
   }
   @media (max-width: 991px) {
     display: none !important;
