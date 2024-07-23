@@ -9,22 +9,22 @@ import Form from "../Form/Form";
 
 const how_work = [
   {
-    img: "/testovoe_react/src/assets/how_work/1.svg",
+    img: "/testovoe_react/how_work/1.svg",
     title: "Прочитай задание внимательно",
     text: "Думаю у тебя не займет это больше двух-трех минут",
   },
   {
-    img: "/testovoe_react/src/assets/how_work/2.svg",
+    img: "/testovoe_react/how_work/2.svg",
     title: "Изучи весь макет заранее",
     text: "Подумай как это будет работать на разных разрешениях и при скролле",
   },
   {
-    img: "/testovoe_react/src/assets/how_work/3.svg",
+    img: "/testovoe_react/how_work/3.svg",
     title: "Сделай хорошо",
     text: "Чтобы мы могли тебе доверить подобные задачи в будущем",
   },
   {
-    img: "/testovoe_react/src/assets/how_work/4.svg",
+    img: "/testovoe_react/how_work/4.svg",
     title: "Получи предложение",
     text: "Ну тут все просто, не я придумал правила, но думаю так и будет)))",
   },
